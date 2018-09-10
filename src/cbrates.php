@@ -1,4 +1,5 @@
 <?php
+namespace taixcms;
 /**
  * Created by PhpStorm.
  * User: pg
@@ -16,7 +17,7 @@ class cbrates{
 		}
 		$this -> date = $date;
 	}
-	public function curs($currency_code){
+	public static function curs($currency_code){
 		$url = self::url;
 		$curs = 0;
 		try{
