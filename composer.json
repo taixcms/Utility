@@ -1,0 +1,16 @@
+{
+  "name":"taixcms/cbrates.rbc",
+  "description": "Test composer package",
+  "authors": [
+	{
+	  "name": "Pavel Gubin",
+	  "email": "admin@taix.ru"
+	}
+  ],
+  "require": {
+	"php": ">=5.4.0"
+  },
+  "autoload": {
+	"classmap": ["src"]
+  }
+}
