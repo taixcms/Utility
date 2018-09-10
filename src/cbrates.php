@@ -17,7 +17,7 @@ class cbrates{
 		}
 		$this -> date = $date;
 	}
-	public static function curs($currency_code){
+	public function curs($currency_code){
 		$url = self::url;
 		$curs = 0;
 		try{
