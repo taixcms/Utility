@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="237a55e4-05dd-4af5-9e6a-6fce6f1a604b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cbrates.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/cbrates.php" afterDir="false" />
-    </list>
+    <list default="true" id="237a55e4-05dd-4af5-9e6a-6fce6f1a604b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,12 +190,12 @@
       <workItem from="1536584604451" duration="1364000" />
       <workItem from="1536590877939" duration="868000" />
       <workItem from="1536593557777" duration="279000" />
-      <workItem from="1536594105516" duration="803000" />
+      <workItem from="1536594105516" duration="1132000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5641000" />
+    <option name="totallyTimeSpent" value="5970000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
