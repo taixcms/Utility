@@ -1,13 +1,13 @@
 <?php
 
-namespace Сurrencies;
+namespace phputilities;
 /**
  * Created by PhpStorm.
  * User: pg
  * Date: 10.09.2018
  * Time: 15:21
  */
-class Сbrates {
+class currencies {
 	const url = 'http://cbrates.rbc.ru/tsv/';
 	const file = '.tsv';
 	private $date = 0;
