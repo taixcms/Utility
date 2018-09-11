@@ -1,5 +1,5 @@
 {
-  "name":"Utility/Currencies",
+  "name":"phputilities/currencies",
   "description": "Currency exchange rate converter through the site rbc.ru",
   "authors": [
 	{
