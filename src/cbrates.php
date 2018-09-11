@@ -1,53 +1,57 @@
 <?php
-namespace taixcms;
+
+namespace Сurrencies;
 /**
  * Created by PhpStorm.
  * User: pg
  * Date: 10.09.2018
  * Time: 15:21
  */
-
-class cbrates{
+class Сbrates {
 	const url = 'http://cbrates.rbc.ru/tsv/';
 	const file = '.tsv';
 	private $date = 0;
-	public function __construct($date = null){
-		if ($date == null){
+
+	public function __construct($date = null) {
+		if ($date === null) {
 			$date = time();
 		}
-		$this -> date = $date;
+		$this->date = $date;
 	}
-	public function curs($currency_code){
+
+	public function curs($currency_code) {
 		$url = self::url;
 		$curs = 0;
-		try{
-			if (!is_numeric($currency_code)){
+		try {
+			if (!is_numeric($currency_code)) {
 				throw new \Exception('Передан неверный код валюты');
 			}
 			$url .= $currency_code . '/';
-			if ($this -> date <= 0){
+			if ($this->date <= 0) {
 				throw new \Exception('Передана неверная дата');
 			}
-			$url .= date('Y/m/d', $this -> date);
+			$url .= date('Y/m/d', $this->date);
 			$url .= self::file;
 
-			$page = file_get_contents($url);
-			$curs = $this -> parse($page);
-		}
-		catch (\Exception $e) {
-			echo 'Не удалось получить курс валюты. ',  $e -> getMessage();
+			$page = @file_get_contents($url);
+			if ($page) {
+				$curs = $this->parse($page);
+			}
+
+		} catch (\Exception $e) {
+			echo 'Не удалось получить курс валюты. ', $e->getMessage();
 		}
 		return $curs;
 	}
-	private function parse($file){
-		if (empty($file)){
+
+	private function parse($file) {
+		if (empty($file)) {
 			throw new \Exception('Возможно указан неверный код валюты, также возможно на указанную дату еще не установлен курс валюты, либо сервер "cbrates.rbc.ru" недоступен.');
 		}
 		$curs = explode("\t", $file);
-		if (!empty($curs[1])){
+		if (!empty($curs[1])) {
 			return $curs[1];
-		}
-		else{
+		} else {
 			throw new \Exception('Сервер не выдал результатов по данной валюте на указнную дату');
 		}
 	}

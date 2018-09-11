@@ -1,6 +1,6 @@
 {
-  "name":"taixcms/cbrates-rbc",
-  "description": "Test composer package",
+  "name":"Utility/Currencies",
+  "description": "Currency exchange rate converter through the site rbc.ru",
   "authors": [
 	{
 	  "name": "Pavel Gubin",

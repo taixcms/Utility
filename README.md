@@ -1,1 +1,1 @@
-Тестовый пакет сомпозер
+Currency exchange rate converter through the site rbc.ru
