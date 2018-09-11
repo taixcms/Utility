@@ -24,11 +24,11 @@ class currencies {
 		$curs = 0;
 		try {
 			if (!is_numeric($currency_code)) {
-				throw new \Exception('Передан неверный код валюты');
+				throw new \Exception('Invalid currency code sent');
 			}
 			$url .= $currency_code . '/';
 			if ($this->date <= 0) {
-				throw new \Exception('Передана неверная дата');
+				throw new \Exception('Invalid date sent');
 			}
 			$url .= date('Y/m/d', $this->date);
 			$url .= self::file;
@@ -39,20 +39,20 @@ class currencies {
 			}
 
 		} catch (\Exception $e) {
-			echo 'Не удалось получить курс валюты. ', $e->getMessage();
+			echo 'Could not get the exchange rate. ', $e->getMessage();
 		}
 		return $curs;
 	}
 
 	private function parse($file) {
 		if (empty($file)) {
-			throw new \Exception('Возможно указан неверный код валюты, также возможно на указанную дату еще не установлен курс валюты, либо сервер "cbrates.rbc.ru" недоступен.');
+			throw new \Exception('An incorrect currency code may have been specified, it is also possible that the exchange rate has not yet been set for the specified date, or the server "cbrates.rbc.ru" is not available.');
 		}
 		$curs = explode("\t", $file);
 		if (!empty($curs[1])) {
 			return $curs[1];
 		} else {
-			throw new \Exception('Сервер не выдал результатов по данной валюте на указнную дату');
+			throw new \Exception('The server did not issue results for this currency on the expiring date');
 		}
 	}
 }
