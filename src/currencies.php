@@ -90,6 +90,7 @@ class currencies {
 		}
 	}
 
+
 	private function parse($file) {
 		if (empty($file)) {
 			throw new \Exception('An incorrect currency code may have been specified, it is also possible that the exchange rate has not yet been set for the specified date, or the server "cbrates.rbc.ru" is not available.');
